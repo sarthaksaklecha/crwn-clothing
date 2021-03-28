@@ -1,3 +1,4 @@
 export const actionTypes = {
-    HIDDEN : 'HIDDEN'
+    HIDDEN : 'HIDDEN',
+    ADD_ITEM : 'ADD_ITEM'
 }

@@ -6,3 +6,8 @@ export const toggleDropdown = () => (
         payload: null
     }
 )
+
+export const addItem = (item) => ({
+    type : actionTypes.ADD_ITEM,
+    payload : item
+})
