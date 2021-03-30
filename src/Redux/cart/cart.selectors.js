@@ -13,6 +13,6 @@ export const cartItemsQuantitySelector = createSelector(
 )
 
 export const hiddenSelector = createSelector(
-    [cartItemsSelector],
-    (cartItems) => cartItems.hidden
+    [cartSelector],
+    (cart) => cart.hidden
 )
