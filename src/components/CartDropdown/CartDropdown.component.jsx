@@ -15,9 +15,12 @@ const CartDropdown = ({ cartItems, history }) => (
     <div className = 'cart-dropdown'>
         <div className = 'cart-items'>
             {
+                cartItems.length ?
                 cartItems.map(item=>(
                     <CartItem item = {item}/>
                 ))
+                :
+                <span className='empty-message'> Your cart is empty </span>
             }
         </div>
         <CustomButton onClick={()=>history.push('/checkout')} style = {{padding : 0}}>GO TO CHECKOUT</CustomButton>        
