@@ -5,7 +5,7 @@ import './checkoutPage.styles.scss';
 import { connect } from 'react-redux';
 
 //component
-import { CheckoutItem } from '../../components/checkout-item/checkout-item.component';
+import CheckoutItem from '../../components/checkout-item/checkout-item.component';
 
 //selectors
 import { cartItemsSelector } from '../../Redux/cart/cart.selectors'
