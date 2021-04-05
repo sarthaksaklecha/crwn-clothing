@@ -29,9 +29,6 @@ const CheckoutPage = ({ cartItems, total }) => (
         <div className = 'header-block'>
           <span>Remove</span>
         </div>
-        <div className = 'header-block'>
-          <span>Products</span>
-        </div>
       </div>
       {
         cartItems.map(item=> <CheckoutItem key={item.id} item={item} />)
