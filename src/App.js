@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 
-import {Route,Switch, Redirect} from 'react-router-dom';
+import { Route,Switch,Redirect } from 'react-router-dom';
 
 import {Homepage} from './pages/HomePage/homepage.component.jsx';
 import ShopPage from './pages/ShopPage/ShopPage.component.jsx'
