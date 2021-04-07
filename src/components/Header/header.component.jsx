@@ -1,5 +1,8 @@
 import React from 'react';
+
 import { Link } from 'react-router-dom';
+import { withRouter } from 'react-router-dom'
+
 import './header.styles.scss'
 import { ReactComponent as Logo } from '../../assets/Logo/crown.svg'
 import { auth } from '../../firebase/firebase.utils'
@@ -11,10 +14,10 @@ import { currentUserSelector } from '../../Redux/User/user.selectors';
 import Cart from '../Cart/cart.component';
 import CartDropdown from '../CartDropdown/CartDropdown.component';
 
-const Header = ({ currentUser, hidden}) => (
+const Header = ({ currentUser, history, hidden}) => (
     <div className='header'>
         <div className='logo-container'>
-            <Link className='logo' to='./'><Logo /></Link>
+            <div className='logo' onClick={()=> history.push('')}><Logo /></div>
         </div>
         <div className='options'>
             <div className='option'>
@@ -44,4 +47,4 @@ const mapStateToProps = state => ({
 
 
 
-export default connect(mapStateToProps)(Header);
+export default withRouter(connect(mapStateToProps)(Header));

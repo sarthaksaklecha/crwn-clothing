@@ -20,3 +20,8 @@ export const reduceItem = (item) => ({
     type : actionTypes.REDUCE_ITEM,
     payload : item
 })
+
+export const clearAll = () => ({
+    type : actionTypes.CLEAR_ALL,
+    payload: null
+})
