@@ -24,7 +24,7 @@ const Header = ({ currentUser, history, hidden}) => (
                 <Link to='./shop'>SHOP</Link>
             </div>
             <div className='option'>
-                <Link to='./'>CONTACT</Link>
+                <Link to='./contact'>CONTACT</Link>
             </div>
             {
                 currentUser ?
