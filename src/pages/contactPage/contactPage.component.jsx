@@ -29,12 +29,13 @@ class contactPage extends React.Component{
             subject : '',
             message : ''
         });
+        alert("Message sent successfully");
     } 
     render(){
         const { name,email,subject,message } = this.state;
         return(
         <div className='contact-page'>
-            <h1 className='title'> Contact Page </h1>
+            <h1 className='title'> Contact Us </h1>
             <div className='form-container'>
                 <form onSubmit={this.handleSubmit}>
                     <div className='input-container'>
@@ -51,8 +52,7 @@ class contactPage extends React.Component{
                             <FormInput handleChange = {this.handleChange} value={message} name ='text-area' label='Message'/>
                         </div>
                         <div className='form-input'>
-                            <CustomButton
-                             type='submit' value='SEND' >SEND</CustomButton>
+                            <CustomButton type='submit' value='SEND'>SEND</CustomButton>
                         </div>
                     </div>
                 </form>
