@@ -23,16 +23,15 @@ class contactPage extends React.Component{
     }
     handleSubmit = (e) => {
         e.preventDefault();
-        console.log('submit');
-        e.target.reset();
         this.setState({
             name :'',
             email : '',
             subject : '',
             message : ''
-        })
+        });
     } 
     render(){
+        const { name,email,subject,message } = this.state;
         return(
         <div className='contact-page'>
             <h1 className='title'> Contact Page </h1>
@@ -40,16 +39,16 @@ class contactPage extends React.Component{
                 <form onSubmit={this.handleSubmit}>
                     <div className='input-container'>
                         <div className='form-input'>
-                            <FormInput handleChange = {this.handleChange} value={this.state.name} type='text' name ='name' label='Full Name'/>
+                            <FormInput handleChange = {this.handleChange} value={name} type='text' name ='name' label='Full Name'/>
                         </div>
                         <div className='form-input'>
-                            <FormInput handleChange = {this.handleChange} value={this.state.email} type='email' name ='email' label='Email'/>
+                            <FormInput handleChange = {this.handleChange} value={email} type='email' name ='email' label='Email'/>
                         </div>
                         <div className='form-input'>
-                            <FormInput handleChange = {this.handleChange} value={this.state.subject} type='text' name ='subject' label='Subject'/>
+                            <FormInput handleChange = {this.handleChange} value={subject} type='text' name ='subject' label='Subject'/>
                         </div>
-                        <div className='form-input'>
-                            <FormInput handleChange = {this.handleChange} value={this.state.message} name ='text-area' label='Message'/>
+                        <div className='form-input message'>
+                            <FormInput handleChange = {this.handleChange} value={message} name ='text-area' label='Message'/>
                         </div>
                         <div className='form-input'>
                             <CustomButton
