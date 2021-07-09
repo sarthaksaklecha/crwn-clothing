@@ -49,7 +49,7 @@ class contactPage extends React.Component{
                             <FormInput handleChange = {this.handleChange} value={subject} type='text' name ='subject' label='Subject'/>
                         </div>
                         <div className='form-input message'>
-                            <FormInput handleChange = {this.handleChange} value={message} name ='text-area' label='Message'/>
+                            <FormInput handleChange = {this.handleChange} value={message} type='text' name ='message' label='Message'/>
                         </div>
                         <div className='form-input'>
                             <CustomButton type='submit' value='SEND'>SEND</CustomButton>

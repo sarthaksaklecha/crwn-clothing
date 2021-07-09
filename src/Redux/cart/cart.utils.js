@@ -16,7 +16,13 @@ export const reduceItem = (cartItems,cartItemToReduce) => {
     let newCart = cartItems.map((item,i) => {
         if(item.id === cartItemToReduce.id){
             --item.quantity
-            removeItemIndex = item.quantity === 0 ? i : false;  
+            if(item.quantity === 0){
+                let confirmRemoval = window.confirm("Do you wish to remove the item?");
+                if(confirmRemoval) removeItemIndex =i;
+                else item.quantity++;
+            }else{
+                removeItemIndex = false;  
+            }
         } 
         return {...item}
     });
